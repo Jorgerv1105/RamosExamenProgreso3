@@ -17,7 +17,7 @@
             <Switch IsToggled="{Binding Favorito}" />
             <Label Text="¿Es Favorito?" />
 
-            <Button Text="Guardar Contacto" Command="{Binding GuardarCommand}" />
+            <Button Text="Guardar Contacto " Command="{Binding GuardarCommand}" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
