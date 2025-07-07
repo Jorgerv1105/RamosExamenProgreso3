@@ -1,0 +1,19 @@
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="RamosExamenProgreso3.Views.LogsPage"
+    xmlns:vm="clr-namespace:RamosExamenProgreso3.ViewModels"
+    Title="Logs">
+
+    <ContentPage.BindingContext>
+        <vm:LogsViewModel />
+    </ContentPage.BindingContext>
+
+    <CollectionView ItemsSource="{Binding Registros}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Label Text="{Binding .}" Padding="10"/>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

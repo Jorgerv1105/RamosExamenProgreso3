@@ -1,12 +1,17 @@
-﻿namespace RamosExamenProgreso3
-{
-    public partial class App : Application
-    {
-        public App()
-        {
-            InitializeComponent();
+﻿using RamosExamenProgreso3.Services;
 
-            MainPage = new AppShell();
-        }
+namespace RamosExamenProgreso3;
+
+public partial class App : Application
+{
+    public static ContactoDatabase Database { get; private set; }
+
+    public App()
+    {
+        InitializeComponent();
+        MainPage = new AppShell();
+
+        string dbPath = Path.Combine(FileSystem.AppDataDirectory, "contactos.db3");
+        Database = new ContactoDatabase(dbPath);
     }
 }

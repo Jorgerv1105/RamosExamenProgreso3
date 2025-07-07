@@ -1,0 +1,23 @@
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="RamosExamenProgreso3.Views.AgregarContactoPage"
+    Title="Jorge Ramos - 11/05/2003"
+    xmlns:vm="clr-namespace:RamosExamenProgreso3.ViewModels">
+
+    <ContentPage.BindingContext>
+        <vm:ContactoViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+            <Entry Placeholder="Nombre" Text="{Binding Nombre}" />
+            <Entry Placeholder="Correo" Text="{Binding Correo}" Keyboard="Email" />
+            <Entry Placeholder="Teléfono" Text="{Binding Telefono}" Keyboard="Telephone" />
+            <Switch IsToggled="{Binding Favorito}" />
+            <Label Text="¿Es Favorito?" />
+
+            <Button Text="Guardar Contacto" Command="{Binding GuardarCommand}" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
