@@ -8,6 +8,6 @@
     <TabBar>
         <ShellContent Title="Agregar" ContentTemplate="{DataTemplate views:AgregarContactoPage}" />
         <ShellContent Title="Listado" ContentTemplate="{DataTemplate views:ListadoContactosPage}" />
-        <ShellContent Title="Logs" ContentTemplate="{DataTemplate views:LosPage}" />
+        <ShellContent Title="Logs" ContentTemplate="{DataTemplate views:LogsPage}" />
     </TabBar>
 </Shell>
