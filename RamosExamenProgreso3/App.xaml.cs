@@ -11,7 +11,7 @@ public partial class App : Application
         InitializeComponent();
         MainPage = new AppShell();
 
-        string dbPath = Path.Combine(FileSystem.AppDataDirectory, "contatos.db3");
+        string dbPath = Path.Combine(FileSystem.AppDataDirectory, "contactos.db3");
         Database = new ContactoDatabase(dbPath);
     }
 }
